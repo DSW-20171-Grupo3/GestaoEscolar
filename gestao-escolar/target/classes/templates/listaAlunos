@@ -1,0 +1,26 @@
+ <html>
+  <head>
+  <title>Lista de Alunos</title>
+  </head>
+  <body>
+        <h2>Lista de Livros por Autor</h2>
+        <div th:unless="${#lists.isEmpty(alunos)}">
+              <dl th:each="Aluno : ${alunos}">
+                    <dt class="bookHeadline">
+                          <span th:text="${aluno.nome}">Nome</span>
+                    </dt>
+              </dl>
+        </div>
+        <div th:if="${#lists.isEmpty(alunos)}">
+              <p>Nenhum Aluno Cadastrado para essa turma</p>
+        </div>
+        <hr />
+        <h3>Adicione um novo aluno para a turma:</h3>
+        <form method="POST">
+              <label for="nome">Nome:</label> <input type="text" name="nome" size="50"></input><br />
+              <label for="matricula">Matricula:</label> <input type="text" name="matricula" size="50"></input><br />  
+              <label for="idTurma">Turma:</label> <input type="text" name="idTurma" size="15"></input><br /> 
+              <br /> <input type="submit"></input>
+        </form>
+  </body>
+  </html>
