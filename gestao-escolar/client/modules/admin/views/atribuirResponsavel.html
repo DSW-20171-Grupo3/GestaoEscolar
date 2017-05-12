@@ -1,0 +1,41 @@
+<template name="atribuirResponsavel">
+  <h1>{{nome}}</h1>
+
+  {{#if alunoVinculado}}
+  <h4>Alunos Vinculados:</h4>
+  {{/if}}
+  {{#each alunoVinculado}}
+  <div class="row">
+    <div class="col-md-2">
+      Nome: {{{name}}} <br>Mat.:{{{matricula}}}
+    </div>
+    <div class="col-md-1">
+      <a class="removeAluno btn btn-danger" href=""><i class="fa fa-minus" aria-hidden="true"></i></a>
+    </div>
+  </div>
+  {{else}}
+    Não existem alunos vinculados a esta conta.
+  {{/each}}
+  <hr>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group" data-required="true">
+        <label for="queryAluno" class="control-label"></label>
+        <input autocomplete="off" type="text" name="nome" id="queryAluno" required="" data-schema-key="nome" class="form-control">
+        <span class="help-block"></span>
+      </div>
+    </div>
+  </div>
+  {{#each getAlunos}}
+    <div class="row">
+      <div class="col-md-2">
+        Nome: {{{name}}} <br>Mat.:{{{matricula}}}
+      </div>
+      <div class="col-md-1">
+        <a class="addAluno btn btn-primary" href=""><i class="fa fa-plus" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  {{else}}
+    <!-- Nenhum aluno encontrado -->
+  {{/each}}
+</template>

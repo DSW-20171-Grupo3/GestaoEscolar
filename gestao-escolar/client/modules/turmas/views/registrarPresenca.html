@@ -1,0 +1,106 @@
+<template name="registrarPresenca">
+  <hr>
+  <div class="container container-profile">
+      <div class="row">
+    		<div class="col-sm-10"><h1>{{currentUser.profile.name}}</h1></div>
+      </div>
+      <div class="row">
+    		<div class="col-sm-3"><!--left col-->
+
+            <ul class="list-group">
+              <li class="list-group-item text-muted">Perfil</li>
+              <li class="list-group-item text-right"><span class="pull-left"><strong>Entrou em</strong></span>{{mes}} {{ano}}</li>
+            </ul>
+
+            <ul class="list-group">
+              <li class="list-group-item text-muted">
+                Matéria
+              </li>
+              <li class="list-group-item text-right">
+                <div class="form-group">
+                <select class="form-control" id="sel1">
+                  {{#each materias}}
+                    <option value="{{_id}}">{{nome}}</option>
+                  {{/each}}
+                </select>
+              </div>
+              </li>
+            </ul>
+
+            <ul class="list-group">
+              <li class="list-group-item text-muted">Dia</li>
+              <li class="list-group-item text-right"><input type="text" class="datepicker"></li>
+            </ul>
+
+
+
+
+          </div><!--/col-3-->
+      	<div class="col-sm-9">
+
+            <!-- <ul class="nav nav-tabs" id="myTab">
+              <li class="active"><a href="" data-toggle="tab">Registrar Presença</a></li>
+            </ul> -->
+
+
+            <div class="tab-content">
+              <div class="tab-pane active" id="home">
+                <div class="table-responsive">
+                  <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th>Aluno</th>
+                        <th>Matrícula</th>
+                        <th>Registrar Presença</th>
+                      </tr>
+                    </thead>
+                    {{#each alunosNaTurma}}
+                    <tbody>
+                      <tr>
+                        <td>{{nome}}</td>
+                        <td>{{matricula}}</td>
+                        <!-- <td><a class="btn btn-primary"><i class="fa {{isPresence}}" aria-hidden="true"></i></a></td> -->
+                        <td>
+                          <div class="btn-group" data-toggle="buttons">
+                          <label class="btn btn-primary active">
+                  				<input id="{{_id}}" type="checkbox" autocomplete="off" checked>
+                  				<span class="glyphicon glyphicon-ok"></span>
+                    			</label>
+                          </div>
+
+                      </td>
+                      </tr>
+                    </tbody>
+                    {{/each}}
+                    <tbody id="submit">
+                      <tr>
+                        <td><a href="" class="savePresence btn btn-success">Salvar</a></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <hr>
+                  <div class="row">
+                    <div class="col-md-4 col-md-offset-4 text-center">
+                    	<ul class="pagination" id="myPager"></ul>
+                    </div>
+                  </div>
+                </div><!--/table-resp-->
+
+                <hr>
+
+               </div><!--/tab-pane-->
+               <div class="tab-pane" id="messages">
+
+                 <h2></h2>
+
+
+               </div><!--/tab-pane-->
+
+                </div><!--/tab-pane-->
+            </div><!--/tab-content-->
+
+          </div><!--/col-9-->
+      </div><!--/row-->
+</template>

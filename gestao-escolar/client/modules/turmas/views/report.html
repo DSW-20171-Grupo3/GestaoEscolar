@@ -1,0 +1,23 @@
+<template name="report">
+  <pre>
+    {{nome}}
+  </pre>
+  {{#each presences}}
+
+  {{#if isAluno}}
+  <pre>
+    {{turma}}, {{materia}}, {{dia}}, {{isPresence}}
+  </pre>
+  {{/if}}
+
+
+
+  {{else}}
+
+  <pre>
+    Não existem chamadas para este aluno.
+  </pre>
+
+  {{/each}}
+
+</template>
