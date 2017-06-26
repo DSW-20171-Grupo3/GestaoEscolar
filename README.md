@@ -37,8 +37,6 @@ Visualize a documentação na nossa [wiki](https://github.com/DSW-20171-Grupo3/G
 
 ## Utilização
 
-### Configurações Gerais
-
 As configurações gerais podem ser feitas no arquivo 'Config', dentro das pasta 'lib'
 
 As opções disponíveis são as seguintes:
@@ -64,6 +62,14 @@ Rh = RhPrototype;
 ```
 
 **groupLabel**: Conjunto de Grupos
+
+**Relatórios**: Para customizar os relatórios basta alterar os parâmetros passados ao construtor da classe RelatórioProxy
+
+```
+new Relatorio(presences, faltas, name)
+```
+
+
 
 
 
