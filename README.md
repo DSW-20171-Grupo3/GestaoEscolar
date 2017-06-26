@@ -69,6 +69,10 @@ Rh = RhPrototype;
 new Relatorio(presences, faltas, name)
 ```
 
+presences: Query para retornar as presenças
+faltas: Query para retornar as faltas
+name: Nome do relatoório
+
 
 
 
