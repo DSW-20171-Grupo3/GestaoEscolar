@@ -35,6 +35,45 @@ Abra seu navegador em localhost:3000
 
 Visualize a documentação na nossa [wiki](https://github.com/DSW-20171-Grupo3/GestaoEscolar/wiki).
 
+## Utilização
+
+### Configurações Gerais
+
+As configurações gerais podem ser feitas no arquivo 'Config', dentro das pasta 'lib'
+
+As opções disponíveis são as seguintes:
+
+**adminEmail**: Email default para administrador
+**homeColor**: Cor para a página home
+\*cores disponíveis: Navy, black, teal, maroon, yellow, red, orange, blue, green
+
+**adminColor**: Cor para a página admin
+**name**: Nome da aplicação
+**groups**: Grupos de Usuários Gerenciáveis
+Para criar novos grupos lembre de criar a classe correspondente:
+```
+class RhPrototype extends Group {
+  constructor(Nome, Cpf) {
+    super();
+    this.Name = Nome,
+    this.Cpf = Cpf
+  }
+}
+
+Rh = RhPrototype;
+```
+
+**groupLabel**: Conjunto de Grupos
+
+
+
+
+
+
+
+
+
+
 
 
 <p align="center">Grupo 3 - Desenho de Software <br /><br />
